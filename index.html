@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator & Strength Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        
+        <div class="password-display">
+            <input type="text" id="password" readonly>
+            <button class="copy-btn" id="copy-btn">Copy</button>
+        </div>
+        
+        <div class="options">
+            <div class="length-control">
+                <label for="length">Password Length:</label>
+                <input type="number" id="length" min="4" max="50" value="12">
+            </div>
+            
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="uppercase" checked>
+                    Uppercase Letters (A-Z)
+                </label>
+            </div>
+            
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="lowercase" checked>
+                    Lowercase Letters (a-z)
+                </label>
+            </div>
+            
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="numbers" checked>
+                    Numbers (0-9)
+                </label>
+            </div>
+            
+            <div class="option-group">
+                <label>
+                    <input type="checkbox" id="symbols">
+                    Symbols (!@#$%^&*)
+                </label>
+            </div>
+        </div>
+        
+        <button class="generate-btn" id="generate-btn">Generate Password</button>
+        
+        <div class="strength-meter">
+            <div class="strength-label">
+                <span>Password Strength:</span>
+                <span id="strength-value">-</span>
+            </div>
+            <div class="meter">
+                <div class="strength-bar" id="strength-bar"></div>
+            </div>
+            <div class="strength-text" id="strength-text"></div>
+        </div>
+        
+        <div class="password-history">
+            <h3>Recent Passwords</h3>
+            <div id="history-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
